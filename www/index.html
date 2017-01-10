@@ -36,10 +36,37 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">PharmaHelp</h1>
       </ion-header-bar>
       <ion-content>
+        <form name = "inputForm" ng-controller="HomeController as home" ng-submit="home.submit()">
+          <div class="list">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Doctor</span>
+              <input type="text" placeholder="Doctor">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Hospital</span>
+              <input type="text" placeholder="Hospital">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Medicine</span>
+              <input type="text" placeholder="Medicine" ng-model="home.medicine">
+            </label>
+          </div>
+
+          <button class="button button-block button-positive">
+            Submit
+          </button>
+
+          <div class="card">
+            <div class="item item-text-wrap" ng-show="home.card">
+              The suggested medicine instead of <b>{{home.medicine}}</b> is <b>{{home.replacement}}</b>
+            </div>
+          </div>
+        </form>
       </ion-content>
+
     </ion-pane>
   </body>
 </html>
