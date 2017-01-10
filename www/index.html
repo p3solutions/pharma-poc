@@ -58,8 +58,8 @@
           Submit
         </button>
 
-        <div class="card ng-show">
-          <div class="item item-text-wrap">
+        <div class="card ng-show" ng-controller="HomeController as home">
+          <div class="item item-text-wrap" ng-show="home.card">
             This is a pop-up which would show the suggested replacement drug
           </div>
         </div>
