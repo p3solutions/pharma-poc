@@ -3,70 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
-
+    <title>PharmaHelp</title>
     <link rel="manifest" href="manifest.json">
-
-    <!-- un-comment this code to enable service worker
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('service worker installed'))
-          .catch(err => console.log('Error', err));
-      }
-    </script>-->
-
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-
-    <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
-    <!-- your app's js -->
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="starter">
-
+  <body ng-app="starter" ng-controller="DashboardController as dshbrdCtrl">
     <ion-pane>
-      <ion-header-bar class="bar-stable">
+      <ion-header-bar class="bar-positive">
         <h1 class="title">PharmaHelp</h1>
       </ion-header-bar>
       <ion-content>
-        <form name = "inputForm" ng-controller="HomeController as home" ng-submit="home.submit()">
-          <div class="list">
-            <label class="item item-input item-floating-label">
-              <span class="input-label">Doctor</span>
-              <input type="text" placeholder="Doctor">
-            </label>
-            <label class="item item-input item-floating-label">
-              <span class="input-label">Hospital</span>
-              <input type="text" placeholder="Hospital">
-            </label>
-            <label class="item item-input item-floating-label">
-              <span class="input-label">Medicine</span>
-              <input type="text" placeholder="Medicine" ng-model="home.medicine">
-            </label>
-          </div>
-
-          <button class="button button-block button-positive">
-            Submit
-          </button>
-
-          <div class="card">
-            <div class="item item-text-wrap" ng-show="home.card">
-              The suggested medicine instead of <b>{{home.medicine}}</b> is <b>{{home.replacement}}</b>
-            </div>
-          </div>
-        </form>
+        <div class="list">
+          <a ng-repeat = "item in dshbrdCtrl.items"
+            class="item item-thumbnail-left"
+            href="#/{{item.id}}">
+            <img ng-src="img/{{item.id}}.jpg">
+            <h2>{{item.name}}</h2>
+            <h4>{{item.speciality}}</h4>
+          </a>
+        </div>
       </ion-content>
-
     </ion-pane>
   </body>
 </html>
