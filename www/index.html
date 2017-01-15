@@ -15,6 +15,7 @@
     <ion-pane>
       <ion-header-bar class="bar-positive">
         <h1 class="title">PharmaHelp</h1>
+        <a class="button button-icon icon ion-plus-circled" href ="add_doctor.html"></a>
       </ion-header-bar>
       <ion-content>
         <div class="list">
@@ -22,7 +23,7 @@
             class="item item-thumbnail-left"
             href="#/{{item.id}}">
             <img ng-src="img/{{item.id}}.jpg">
-            <h2>{{item.name}}</h2>
+            <h1>{{item.name}}</h1>
             <h4>{{item.speciality}}</h4>
           </a>
         </div>
