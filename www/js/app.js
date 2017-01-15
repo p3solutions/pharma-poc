@@ -24,16 +24,9 @@ app = angular.module('starter', ['ionic'])
 })
 
 app.controller('HomeController', function() {
-  this.card = false;
-  this.medicine =""
-  this.replacement =""
-
-  this.submit = function() 
-  {
-    if (this.medicine == "metacin")
-    {
-      this.card = true;
-      this.replacement = "paracetamol"
-    }
-  }
+  this.msg = "hello"
+  this.items = [
+    { id: 1, name: "raja", speciality: "Cardio"},
+    { id: 2, name: "mani", speciality: "Ortho"}
+  ]
 });
