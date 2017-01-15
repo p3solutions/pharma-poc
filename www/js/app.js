@@ -12,8 +12,7 @@ app = angular.module('starter', ['ionic'])
   });
 })
 
-app.controller('HomeController', function() {
-  this.msg = "hello"
+app.controller('DashboardController', function() {
   this.items = [
     { id: 1, name: "raja", speciality: "Cardio"},
     { id: 2, name: "mani", speciality: "Ortho"}
