@@ -1,5 +1,4 @@
 app = angular.module('starter', ['ionic'])
-
 .run(function($ionicPlatform) 
 {
   $ionicPlatform.ready(function() 
@@ -32,20 +31,25 @@ app = angular.module('starter', ['ionic'])
       templateUrl: 'templates/add_doctor.html',
       controller: 'DashboardController'
     });
-  $urlRouterProvider.otherwise('/login')
+  $urlRouterProvider.otherwise('/dashboard')
 });
 
-app.controller('DashboardController', function() 
+app.controller('DashboardController', function($scope)
 {
-  this.items = 
+  $scope.items =
   [
     { id: 1, name: "raja", speciality: "Cardio"},
-    { id: 2, name: "mani", speciality: "Ortho"}
+    { id: 2, name: "mani", speciality: "Ortho"},
+    { id: 3, name: "anand", speciality: "Optha"}
   ]
 
-  this.addDoctor = function()
+  $scope.addDoctor = function()
   {
-    newobj = { id: 4, name: "new", speciality: "Anaesthetist"}
-    this.items.push(newobj);
+    doctor = {
+      id: 4,
+      name: this.doctor_name,
+      speciality: this.doctor_speciality
+    }
+    this.items.push(doctor);
   }
 });

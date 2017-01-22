@@ -3,15 +3,15 @@
   <a class="button icon-left ion-home" href ="/#/dashboard"></a>
 </ion-header-bar>
 <ion-content>
-  <form name = "inputForm">
+  <form name = "inputForm" ng-submit="addDoctor()">
     <div class="list">
       <label class="item item-input item-floating-label">
         <span class="input-label">Doctor</span>
-        <input type="text" placeholder="Doctor">
+        <input type="text" placeholder="Doctor" ng-model="doctor_name">
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Speciality</span>
-        <input type="text" placeholder="Hospital">
+        <input type="text" placeholder="Hospital" ng-model="doctor_speciality">
       </label>
     </div>
     <button class="button button-block button-positive">
