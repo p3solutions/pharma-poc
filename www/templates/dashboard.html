@@ -1,0 +1,15 @@
+<ion-header-bar class="bar-positive">
+  <h1 class="title">PharmaHelp</h1>
+  <a class="button button-icon icon ion-plus-circled" href ="/#/doctor/add"></a>
+</ion-header-bar>
+<ion-content>
+  <div class="list">
+    <a ng-repeat = "item in dshbrdCtrl.items"
+      class="item item-thumbnail-left"
+      href="#/{{item.id}}">
+      <img ng-src="img/{{item.id}}.jpg">
+      <h1>{{item.name}}</h1>
+      <h4>{{item.speciality}}</h4>
+    </a>
+  </div>
+</ion-content>

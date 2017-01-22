@@ -15,6 +15,25 @@ app = angular.module('starter', ['ionic'])
     }
   });
 })
+.config(function($stateProvider, $urlRouterProvider){
+  $stateProvider
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginController'
+    })
+    .state('dashboard', {
+      url: '/dashboard',
+      templateUrl: 'templates/dashboard.html',
+      controller: 'DashboardController'
+    })
+    .state('add_doctor', {
+      url: '/doctor/add',
+      templateUrl: 'templates/add_doctor.html',
+      controller: 'DashboardController'
+    });
+  $urlRouterProvider.otherwise('/login')
+});
 
 app.controller('DashboardController', function() 
 {
