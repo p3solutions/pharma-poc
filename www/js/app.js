@@ -30,8 +30,13 @@ app = angular.module('starter', ['ionic'])
       url: '/doctor/add',
       templateUrl: 'templates/add_doctor.html',
       controller: 'DashboardController'
+    })
+    .state('view_doctors', {
+      url: '/doctor/view',
+      templateUrl: 'templates/doctors.html',
+      controller: 'DashboardController'
     });
-  $urlRouterProvider.otherwise('/dashboard')
+  $urlRouterProvider.otherwise('/login')
 });
 
 app.controller('DashboardController', function($scope)
