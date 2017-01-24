@@ -19,7 +19,7 @@ app = angular.module('starter', ['ionic'])
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'LoginController'
+      controller: 'DashboardController'
     })
     .state('dashboard', {
       url: '/dashboard',
