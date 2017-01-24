@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login</title>
+    <title>Sales Rep Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
+           <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
                        Navigation
@@ -71,44 +71,78 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
+  
         <div id="page-content-wrapper">
+
             <div class="row top-title">
-                <a href="#menu-toggle"  class="btn btn-default" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
                 <div class="col-lg-12 menu-title">
-                    <h3>Sales Rep</h3>
+                    <h3>Sales Rep Dashboard</h3>
                 </div>
             </div>
+      <div class="bg-img">  
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 login-screen text-center">
-                        <h1>Login</h1>
-                        <form class="form-horizontal login">
-                            <fieldset>
-                                <div class="form-group">
-                                    <div class="col-lg-12">
-                                        <input type="text" class="form-control" id="inputEmail" name="email" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-lg-12">
-                                        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
+                <div class="row add-doc">
+                    <div class="col-xs-8">
+                        <!-- media list -->
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                    </a>
 
+                                    <div class="media-body">
+                                        <h4 class="media-heading">John</h4>
+                                        <p class="specialty">Sr. Rep</p>
+                                        <p class="hospital-name">5 Yrs . Exp</p>
+                                        <p class="location">Location</p>
                                     </div>
+
+
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-lg-12">
-                                        <button type="submit" class="btn btn-default btn-lg btn-block">Login</button>
-                                        <a href="#" class="rest-pass">Reset Password</a>
-                                       <!--  <button type="reset" class="btn btn btn-link btn-lg btn-block"></button> -->
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-xs-4 add-doctor text-center">
+                        <a class="" href="#">
+                  ADD <br>Doctor
+                </a>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 text-center">
+                        <div class="enroll">
+                            <h4>Doctors</h4>
+                            <span class="no-text">50</span>
+                            <p class="">Enrolled</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <div class="cases">
+                            <h4>Successful</h4>
+                            <span class="no-text">50</span>
+                            <p class="">Cases</p>
+                        </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-xs-12 followup text-center">
+          <div class="fa-chat"><h4>4</h4>           
+                        <p class="">Doctor to Follow - up </p></div>
+        <!--  <i class="fa fa-comment-o fa-chat " aria-hidden="true"></i> -->
+                        
+            
             </div>
+                </div>
+            </div>
+      </div>
         </div>
-        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#page-content-wrapper -->
 
     </div>
     <!-- /#wrapper -->
