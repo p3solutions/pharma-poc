@@ -25,28 +25,28 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       controller: 'AppCtrl'
     })
 
-    .state('app.search', {
-      url: "/search",
+    .state('app.dashboard', {
+      url: "/dashboard",
       views: {
         'menuContent' :{
-          templateUrl: "search.html"
+          templateUrl: "dashboard.html"
         }
       }
     })
 
-    .state('app.browse', {
-      url: "/browse",
+    .state('app.add_doctor', {
+      url: "/add_doctor",
       views: {
         'menuContent' :{
-          templateUrl: "browse.html"
+          templateUrl: "add_doctor.html"
         }
       }
     })
-    .state('app.playlists', {
-      url: "/playlists",
+    .state('app.doctors', {
+      url: "/doctors",
       views: {
         'menuContent' :{
-          templateUrl: "playlists.html",
+          templateUrl: "doctors.html",
           controller: 'PlaylistsCtrl'
         }
       }
@@ -62,5 +62,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/dashboard');
 });
