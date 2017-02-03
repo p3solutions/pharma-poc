@@ -12,18 +12,16 @@ angular.module('starter.controllers', [])
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
+  $scope.doctors = []
 
   $http.get("http://localhost:3000/doctors.json")
-            .success(function(data) {
-                $scope.firstname = data.firstname;
-                $scope.lastname = data.lastname;
-                console.log(data);
-            })
-            .error(function(data) {
-                alert("ERROR");
-            });
-
-  console.log("calling this function")
+    .success(function(data) {
+      $scope.doctors = data;
+      console.log($scope.doctors);
+    })
+    .error(function(data) {
+        alert("ERROR");
+    });
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
