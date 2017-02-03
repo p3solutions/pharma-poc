@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <!-- media list -->
-                        <div class="panel panel-default">
+                        <div ng-repeat ="doctor in doctors" class="panel panel-default">
                             <div class="panel-body">
                                 <div class="media">
                                     <a class="pull-left" href="#">
@@ -18,79 +18,10 @@
                                     </a>
 
                                     <div class="media-body">
-                                        <h4 class="media-heading">Alex Alen</h4>
-                                        <p class="specialty">Specialty</p>
-                                        <p class="hospital-name">Hospital Name</p>
-                                        <p class="location">Location</p>
-                                    </div>
-
-                                </div>
-                                <div class="btn-group btn-group-justified">
-                                    <a href="#" class="btn btn-default btn-left"><img src="img/icon-left.png" /></a>
-
-                                    <a href="#" class="btn btn-default btn-right"><img src="img/icon-right.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- media list -->
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-                                    </a>
-
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Alex Alen</h4>
-                                        <p class="specialty">Specialty</p>
-                                        <p class="hospital-name">Hospital Name</p>
-                                        <p class="location">Location</p>
-                                    </div>
-
-                                </div>
-                                <div class="btn-group btn-group-justified">
-                                    <a href="#" class="btn btn-default btn-left"><img src="img/icon-left.png" /></a>
-
-                                    <a href="#" class="btn btn-default btn-right"><img src="img/icon-right.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- media list -->
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-                                    </a>
-
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Alex Alen</h4>
-                                        <p class="specialty">Specialty</p>
-                                        <p class="hospital-name">Hospital Name</p>
-                                        <p class="location">Location</p>
-                                    </div>
-
-                                </div>
-                                <div class="btn-group btn-group-justified">
-                                    <a href="#" class="btn btn-default btn-left"><img src="img/icon-left.png" /></a>
-
-                                    <a href="#" class="btn btn-default btn-right"><img src="img/icon-right.png" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- media list -->
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-                                    </a>
-
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Alex Alen</h4>
-                                        <p class="specialty">Specialty</p>
-                                        <p class="hospital-name">Hospital Name</p>
-                                        <p class="location">Location</p>
+                                        <h4 class="media-heading">{{doctor.first_name}} {{doctor.last_name}}</h4>
+                                        <p class="specialty">{{doctor.speciality}}</p>
+                                        <p class="hospital-name">{{doctor.hospital}}</p>
+                                        <p class="location">{{doctor.city}}</p>
                                     </div>
 
                                 </div>
