@@ -38,7 +38,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: "/add_doctor",
       views: {
         'menuContent' :{
-          templateUrl: "add_doctor.html"
+          templateUrl: "add_doctor.html",
+          controller: 'PlaylistsCtrl'
         }
       }
     })
