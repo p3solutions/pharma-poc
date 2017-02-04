@@ -38,11 +38,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: "/add_doctor",
       views: {
         'menuContent' :{
-          templateUrl: "add_doctor.html"
+          templateUrl: "add_doctor.html",
+          controller: 'PlaylistsCtrl'
         }
       }
     })
     .state('app.doctors', {
+      cache: false,
       url: "/doctors",
       views: {
         'menuContent' :{

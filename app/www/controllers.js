@@ -22,6 +22,25 @@ angular.module('starter.controllers', [])
     .error(function(data) {
         alert("ERROR");
     });
+
+  $scope.addDoctor = function()
+  {
+    doctor = {
+      first_name: this.first_name,
+      last_name: this.last_name,
+      middle_name: this.middle_name,
+      speciality: this.speciality
+    }
+
+    $http.post("http://localhost:3000/doctors.json", doctor)
+      .success(function(data)
+      {
+        console.log("POST success");
+      })
+      .error(function() {
+        console.log("POST error");
+      })
+  }
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
