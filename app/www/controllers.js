@@ -3,15 +3,7 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope) {
 })
 
-.controller('PlaylistsCtrl', function($scope, $http, $state) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+.controller('DoctorsCtrl', function($scope, $http, $state) {
   $scope.doctors = []
   $scope.no_of_doctors = 0;
   $scope.error_message = ""
@@ -58,5 +50,5 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('DoctorCtrl', function($scope, $stateParams) {
 })

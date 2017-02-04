@@ -29,7 +29,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent' :{
           templateUrl: "dashboard.html",
-          controller: 'PlaylistsCtrl'
+          controller: 'DoctorsCtrl'
         }
       }
     })
@@ -38,7 +38,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent' :{
           templateUrl: "add_doctor.html",
-          controller: 'PlaylistsCtrl'
+          controller: 'DoctorsCtrl'
         }
       }
     })
@@ -48,7 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent' :{
           templateUrl: "doctors.html",
-          controller: 'PlaylistsCtrl'
+          controller: 'DoctorsCtrl'
         }
       }
     })
@@ -58,16 +58,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent' :{
           templateUrl: "login.html",
-          controller: 'PlaylistsCtrl'
+          controller: 'DoctorsCtrl'
         }
       }
     })
     .state('app.single', {
-      url: "/playlists/:playlistId",
+      url: "/doctors/:doctorId",
       views: {
         'menuContent' :{
-          templateUrl: "playlist.html",
-          controller: 'PlaylistCtrl'
+          templateUrl: "doctor.html",
+          controller: 'DoctorCtrl'
         }
       }
     });
