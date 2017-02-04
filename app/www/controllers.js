@@ -13,10 +13,12 @@ angular.module('starter.controllers', [])
     { title: 'Cowbell', id: 6 }
   ];
   $scope.doctors = []
+  $scope.no_of_doctors = 0;
 
   $http.get("http://localhost:3000/doctors.json")
     .success(function(data) {
       $scope.doctors = data;
+      $scope.no_of_doctors = data.length
       console.log($scope.doctors);
     })
     .error(function(data) {

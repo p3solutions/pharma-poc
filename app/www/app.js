@@ -29,7 +29,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: "/dashboard",
       views: {
         'menuContent' :{
-          templateUrl: "dashboard.html"
+          templateUrl: "dashboard.html",
+          controller: 'PlaylistsCtrl'
         }
       }
     })
