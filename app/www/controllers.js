@@ -3,7 +3,7 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope) {
 })
 
-.controller('PlaylistsCtrl', function($scope, $http) {
+.controller('PlaylistsCtrl', function($scope, $http, $location) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -38,6 +38,7 @@ angular.module('starter.controllers', [])
       .success(function(data)
       {
         console.log("POST success");
+        $location.path('#/app/doctors');
       })
       .error(function() {
         console.log("POST error");

@@ -26,6 +26,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
 
     .state('app.dashboard', {
+      cache: false,
       url: "/dashboard",
       views: {
         'menuContent' :{
