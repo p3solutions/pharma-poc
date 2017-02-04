@@ -17,22 +17,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
     .state('app', {
       url: "/app",
       abstract: true,
       templateUrl: "menu.html",
       controller: 'AppCtrl'
-    })
-    .state('app.login', {
-      cache: false,
-      url: "/login",
-      views: {
-        'menuContent' :{
-          templateUrl: "login.html",
-          controller: 'PlaylistsCtrl'
-        }
-      }
     })
     .state('app.dashboard', {
       cache: false,
@@ -59,6 +48,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent' :{
           templateUrl: "doctors.html",
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+    .state('app.login', {
+      cache: false,
+      url: "/login",
+      views: {
+        'menuContent' :{
+          templateUrl: "login.html",
           controller: 'PlaylistsCtrl'
         }
       }
