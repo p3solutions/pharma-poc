@@ -3,7 +3,7 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope) {
 })
 
-.controller('PlaylistsCtrl', function($scope, $http) {
+.controller('PlaylistsCtrl', function($scope, $http, $location) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -13,10 +13,12 @@ angular.module('starter.controllers', [])
     { title: 'Cowbell', id: 6 }
   ];
   $scope.doctors = []
+  $scope.no_of_doctors = 0;
 
   $http.get("http://localhost:3000/doctors.json")
     .success(function(data) {
       $scope.doctors = data;
+      $scope.no_of_doctors = data.length
       console.log($scope.doctors);
     })
     .error(function(data) {
@@ -36,6 +38,7 @@ angular.module('starter.controllers', [])
       .success(function(data)
       {
         console.log("POST success");
+        $location.path('#/app/doctors');
       })
       .error(function() {
         console.log("POST error");

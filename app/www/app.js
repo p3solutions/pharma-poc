@@ -26,10 +26,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
 
     .state('app.dashboard', {
+      cache: false,
       url: "/dashboard",
       views: {
         'menuContent' :{
-          templateUrl: "dashboard.html"
+          templateUrl: "dashboard.html",
+          controller: 'PlaylistsCtrl'
         }
       }
     })
