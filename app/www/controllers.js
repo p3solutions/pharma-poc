@@ -14,16 +14,29 @@ angular.module('starter.controllers', [])
   ];
   $scope.doctors = []
   $scope.no_of_doctors = 0;
+  $scope.error_message = ""
 
   $http.get("http://localhost:3000/doctors.json")
     .success(function(data) {
       $scope.doctors = data;
       $scope.no_of_doctors = data.length
-      console.log($scope.doctors);
     })
     .error(function(data) {
         alert("ERROR");
     });
+
+  $scope.isUserValid = function()
+  {
+    if(this.user_name == "admin" && this.password == "password")
+    {
+      this.error_message = ""
+      $location.path('#/app/dashboard');
+    }
+    else
+    {
+      this.error_message = "Incorrect user name or password"
+    }
+  }
 
   $scope.addDoctor = function()
   {
@@ -37,11 +50,10 @@ angular.module('starter.controllers', [])
     $http.post("http://localhost:3000/doctors.json", doctor)
       .success(function(data)
       {
-        console.log("POST success");
         $location.path('#/app/doctors');
       })
-      .error(function() {
-        console.log("POST error");
+      .error(function() 
+      {
       })
   }
 })
