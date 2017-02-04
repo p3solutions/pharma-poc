@@ -44,6 +44,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
     .state('app.doctors', {
+      cache: false,
       url: "/doctors",
       views: {
         'menuContent' :{
