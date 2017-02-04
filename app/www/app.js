@@ -24,7 +24,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       templateUrl: "menu.html",
       controller: 'AppCtrl'
     })
-
+    .state('app.login', {
+      cache: false,
+      url: "/login",
+      views: {
+        'menuContent' :{
+          templateUrl: "login.html",
+          controller: 'PlaylistsCtrl'
+        }
+      }
+    })
     .state('app.dashboard', {
       cache: false,
       url: "/dashboard",
@@ -35,7 +44,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
     .state('app.add_doctor', {
       url: "/add_doctor",
       views: {
@@ -55,7 +63,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
     .state('app.single', {
       url: "/playlists/:playlistId",
       views: {
@@ -66,5 +73,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/dashboard');
+  $urlRouterProvider.otherwise('/app/login');
 });
