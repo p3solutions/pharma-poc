@@ -1,109 +1,33 @@
-<ion-view title="Doctor">
-  <ion-content>
+<ion-view title="Appointment Details">
+  <ion-content class="icons-basic-page">
       <div>
-        <div>
-            <a class="pull-left" href="#">
-                <i class="fa fa-user-circle" aria-hidden="true"></i>
-            </a>
-            <div>
-                <h4 class="media-heading">Alex Alen</h4>
-                <p class="specialty">Specialty</p>
-                <p class="hospital-name">Hospital Name</p>
-                <p class="location">Location</p>
-            </div>
-
+        <div class="panel panel-default">
+          <div class="panel-body">
+              <div class="media">
+                  <a class="pull-left" href="#">
+                      <i class="fa fa-user-circle" aria-hidden="true"></i>
+                  </a>
+                  <div class="media-body">
+                      <h4 class="media-heading">Raja</h4>
+                      <p class="specialty">Cardialogist</p>
+                      <p class="hospital-name">Apollo</p>
+                      <p class="location">Chennai</p>
+                  </div>
+              </div>
+          </div>
         </div>
         <div class="btn-group btn-group-justified">
-            <a href="#" class="btn btn-default btn-left"><img src="img/icon-left.png" /><font size="3 px">Feb 16</font></a>
-
-            <a href="#" class="btn btn-default btn-right"><font size="3 px">From 20:00</br>To 21:00</font></a>
-
+          <div class="item item-icon-left" ion-datetime-picker ng-model="datetimeValue">
+              <i class="icon ion-ios-calendar positive"></i>
+              Appointment Time:
+              <strong>{{datetimeValue| date: "yyyy-MM-dd H:mm"}}</strong>
+          </div>
         </div>
-        <div class="form-group">
-            <input class="form-control" id="notes" type="textarea" rows="10" cols="20" name="notes" placeholder="Notes & Discussions ">
-        </div>
-        <div class="form-group">
-          <input class="form-control" id="drugs" type="textarea"  name="drugs" placeholder="Drugs Name">
-        </div>
-        <div class="form-group">
-        <button type="submit" id="signature" class="btn btn-default btn-lg btn-block" type="button">Add Drugs        +</button>                   
-              </div>
-        <div class="dropdown form-group"> 
-          <button class="form-control" align="left"  data-toggle="dropdown"> Case Status
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Open</a></li>
-            <li><a href="#">Scheduled</a></li>
-            <li><a href="#">Review</a></li>
-            <li><a href="#">Closed</a></li>
-          </ul>
-        </div>
-        <div class="form-group">
-          <input class="form-control" id="status" type="textarea"  name="status" placeholder="Reason">
-        </div>
-        <div class="form-group">
-          <input id="signature" type="text" name="Signature" placeholder="Signature">
-          <a href="#" class="btn btn-default btn-right">Upload</a></br></br>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-default btn-lg btn-block btn-submit">Submit</button>
-        </div>
-  </div>
-</div>
-        <div class="list">
-            <div class="item item-divider">Date picker</div>
-            <div class="item item-icon-left" ion-datetime-picker date ng-model="dateValue">
-                <i class="icon ion-ios-calendar positive"></i>
-                Click me to open the date picker:
-                <strong>{{dateValue| date: "yyyy-MM-dd"}}</strong>
-            </div>
-            <div class="item item-icon-left" ion-datetime-picker date monday-first ng-model="dateValue">
-                <i class="icon ion-ios-calendar-outline positive"></i>
-                Monday as the first day of the week:
-                <strong>{{dateValue| date: "yyyy-MM-dd"}}</strong>
-            </div>
-            <div class="item item-divider">Time picker</div>
-            <div class="item item-icon-left" ion-datetime-picker time ng-model="timeValue">
-                <i class="icon ion-ios-clock positive"></i>
-                Basic time picker:
-                <strong>{{timeValue| date: "H:mm"}}</strong>
-            </div>
-            <div class="item item-icon-left" ion-datetime-picker time seconds ng-model="timeValue">
-                <i class="icon ion-ios-time positive"></i>
-                With seconds:
-                <strong>{{timeValue| date: "H:mm:ss"}}</strong>
-            </div>
-            <div class="item item-icon-left" ion-datetime-picker time am-pm ng-model="timeValue">
-                <i class="icon ion-ios-clock-outline positive"></i>
-                12-hour clock:
-                <strong>{{timeValue| date: "h:mm a"}}</strong>
-            </div>
-            <div class="item item-icon-left" ion-datetime-picker time am-pm seconds ng-model="timeValue">
-                <i class="icon ion-ios-time-outline positive"></i>
-                Combined:
-                <strong>{{timeValue| date: "h:mm:ss a"}}</strong>
-            </div>
-            <div class="item item-divider">Datetime picker</div>
-            <div class="item item-icon-left" ion-datetime-picker ng-model="datetimeValue">
-                <i class="icon ion-ios-grid-view-outline positive"></i>
-                Basic datetime picker:
-                <strong>{{datetimeValue| date: "yyyy-MM-dd H:mm"}}</strong>
-            </div>
-            <div class="item item-icon-left" ion-datetime-picker seconds am-pm ng-model="datetimeValue">
-                <i class="icon ion-ios-barcode-outline positive"></i>
-                With seconds and 12-hour clock:
-                <strong>{{datetimeValue| date: "yyyy-MM-dd h:mm:ss a"}}</strong>
-            </div>
-            <div class="item item-icon-left" ion-datetime-picker monday-first ng-model="datetimeValue">
-                <i class="icon ion-ios-browsers-outline positive"></i>
-                Monday as the first day:
-                <strong>{{datetimeValue| date: "yyyy-MM-dd H:mm"}}</strong>
-            </div>
-            <div class="item item-icon-left" ion-datetime-picker monday-first seconds am-pm ng-model="datetimeValue">
-                <i class="icon ion-ios-lightbulb-outline positive"></i>
-                Everything together:
-                <strong>{{datetimeValue| date: "yyyy-MM-dd h:mm:ss a"}}</strong>
-            </div>
-        </div>
+        <br>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Notes and Discussion</span>
+          <textarea rows="4"></textarea>
+        </label>
+      </div>
     </ion-content>
 </ion-view>
