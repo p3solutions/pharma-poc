@@ -3,7 +3,7 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope) {
 })
 
-.controller('PlaylistsCtrl', function($scope, $http, $location) {
+.controller('PlaylistsCtrl', function($scope, $http, $state) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -30,7 +30,7 @@ angular.module('starter.controllers', [])
     if(this.user_name == "admin" && this.password == "password")
     {
       this.error_message = ""
-      $location.path('#/app/dashboard');
+      $state.go('app.dashboard');
     }
     else
     {
@@ -50,7 +50,7 @@ angular.module('starter.controllers', [])
     $http.post("http://localhost:3000/doctors.json", doctor)
       .success(function(data)
       {
-        $location.path('#/app/doctors');
+        $state.go('app.doctors');
       })
       .error(function() 
       {
