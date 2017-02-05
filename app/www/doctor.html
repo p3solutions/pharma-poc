@@ -23,43 +23,21 @@
                     </div>
                 </div>
                 <div class="btn-group btn-group-justified ">
-                    <a href="# " class="btn btn-default btn-left "><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>
-                      <span class="app-date">February <br>16 </span>
+                    <a href="# " class="btn btn-default btn-left ">
+                        <i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>
+                        <span class="app-date">February <br>16 </span>
                     </a>
-                    <a href="# " class="btn btn-default btn-right "><i class="glyphicon glyphicon-time" aria-hidden="true"></i>
-                      <span class="time">From<br>
-                        20:00
-                      </span>
-                      <span class="time">To<br>
-                        20:30
-                      </span>
-                  </a>
+                    <a href="# " class="btn btn-default btn-right ">
+                        <i class="glyphicon glyphicon-time" aria-hidden="true"></i>
+                        <span class="time">From<br>
+                            20:00
+                        </span>
+                        <span class="time">To<br>
+                            20:30
+                        </span>
+                    </a>
                 </div>
                 <br>
-                <div class="control-group control-add" id="fields">
-                    <div class="controls" id="profs">
-                        <form class="input-append">
-                            <div id="field">
-                                <input autocomplete="off" class="input pull-left" id="field1" name="prof1" type="text" placeholder="Type Drug Name" data-items="8" />
-                                <button class="btn add-more pull-right" type="button">+</button>
-                            </div>
-                        </form>
-                        <br>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div>
-                    <ion-list>
-                      <ion-item ng-repeat="item in items">
-                        Hello, {{item.name}}!
-                        <i class="glyphicon glyphicon-ok pull-middle"
-                            aria-hidden="true"
-                            ng-show="item.available">
-                        </i>
-                      </ion-item>
-                    </ion-list>
-                </div>
                 <div class="row media col-lg-12">
                     <textarea class="text-area" rows="4" placeholder = "Notes"></textarea>
                 </div>
@@ -72,6 +50,35 @@
                             </button>
                         </a>
                     </div>
+                </div>
+                <div class="control-group control-add" id="fields">
+                    <div class="controls" id="profs">
+                        <form class="input-append" ng-submit="addDrug()">
+                            <div id="field">
+                                <input autocomplete="off" class="input pull-left" id="field1" 
+                                    name="prof1" type="text" placeholder="Drug" 
+                                    data-items="8" ng-model="drug_name"/>
+                                <button class="btn add-more pull-right" 
+                                    type="submit">
+                                    +
+                                </button>
+                            </div>
+                        </form>
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <ion-list>
+                      <ion-item ng-repeat="item in items">
+                        {{item.name}}
+                        <i class="glyphicon glyphicon-ok pull-middle"
+                            aria-hidden="true"
+                            ng-show="item.available">
+                        </i>
+                      </ion-item>
+                    </ion-list>
                 </div>
             </div>
         </div>
