@@ -51,4 +51,5 @@ angular.module('starter.controllers', [])
 })
 
 .controller('DoctorCtrl', function($scope, $stateParams) {
+  $scope.dateValue = new Date();
 })
