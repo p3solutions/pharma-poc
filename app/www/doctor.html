@@ -1,33 +1,153 @@
 <ion-view title="Appointment Details">
-  <ion-content class="icons-basic-page">
-      <div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-              <div class="media">
-                  <a class="pull-left" href="#">
-                      <i class="fa fa-user-circle" aria-hidden="true"></i>
+  <ion-content>
+    <div id="wrapper">
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row media col-lg-12">
+                    <div class="col-sm-1 pull-left">
+                        <p> <span class="fa fa-user"></span></p>
+                    </div>
+                    <div class="col-sm-11 pull-middle">
+                        <p><span class="fa fa-stethoscope pull-middle"></span>
+                            <h4 class="media-heading">Alex Alen</h4>
+                            <p class="specialty ">Specality</p>
+                        </p>
+                        <p><span class="glyphicon glyphicon-envelope pull-middle "></span>alexalen@dm.com</p>
+                        <p><span class="glyphicon glyphicon-earphone pull-middle"></span><span class="phone"> 555 555 5555</span></p>
+                        <p><span class="glyphicon glyphicon-map-marker pull-middle"></span><span class="local"> Location</span></p>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified ">
+                    <a href="# " class="btn btn-default btn-left "><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>
+                      <span class="app-date">February <br>16 </span>
+                   </a>
+                    <a href="# " class="btn btn-default btn-right "><i class="glyphicon glyphicon-time" aria-hidden="true"></i>
+                  <span class="time">From<br>
+          20:00
+                  </span>
+                  <span class="time">To<br>
+                20:30
+                  </span>
                   </a>
-                  <div class="media-body">
-                      <h4 class="media-heading">Raja</h4>
-                      <p class="specialty">Cardialogist</p>
-                      <p class="hospital-name">Apollo</p>
-                      <p class="location">Chennai</p>
-                  </div>
-              </div>
-          </div>
+
+                </div>
+                <div class="row  btn-group-justified ">
+                    <div class="col-sm-6">
+                        <div class="input-group input-group-sm col-sm-6 pull-right">
+                            <input type="text" class="form-control" placeholder="09"> <label>Total Visit:</label></div>
+                    </div>
+                </div>
+                <div class="row media col-lg-12">
+                    <textarea class="text-area" rows="4" cols="34" placeholder="Notes & Discussions"></textarea></div>
+                <form class="form-horizontal">
+
+                    <!-- -->
+                    <input type="hidden" name="count" value="1" />
+                    <div class="control-group control-add" id="fields">
+                        <div class="controls" id="profs">
+                            <form class="input-append">
+                                <div id="field">
+
+                                    <input autocomplete="off" class="input pull-left" id="field1" name="prof1" type="text" placeholder="Type Drug Name" data-items="8" />
+                                    <button id="b1" class="btn add-more pull-right" type="button">+</button></div>
+                            </form>
+                            <br>
+                            <small>Press + to add</small>
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <div class="drop-down ">
+                            <select>
+                    <option value="volvo ">Case Status</option>
+                    <option value="saab ">Successfully Closed</option>
+                    <option value="opel ">Need Follow-up's</option>
+                    <option value="audi ">Case Failed</option>
+                  </select>
+                        </div>
+                        <div class="row media col-lg-12">
+                            <textarea class="text-area" rows="4" cols="34" placeholder="Reason"></textarea>
+                            <div class="Upload-sign">
+                                <label class="btn btn-default btn-file btn-lg btn-block">
+    Upload Signature <input type="file" placeholder="Signature "  hidden>
+</label>
+
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div>
+                                <a href="#"><button type="submit " class="btn btn-default btn-lg btn-block ">Submit</button></a>
+
+                            </div>
+                        </div>
+                        <div class="row col-xs-12 bottom-fix">
+                            <div class="col-xs-4">Available<span class="available pull-right"><i class="glyphicon glyphicon-ok pull-middle" aria-hidden="true"></i></span></div>
+                            <div class="col-xs-4">Substute<span class="substute pull-right"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></span></div>
+                            <div class="col-xs-4">Search<span class="searchg pull-right"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></span></div>
+
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </div>
-        <div class="btn-group btn-group-justified">
-          <div class="item item-icon-left" ion-datetime-picker ng-model="datetimeValue">
-              <i class="icon ion-ios-calendar positive"></i>
-              Appointment Time:
-              <strong>{{datetimeValue| date: "yyyy-MM-dd H:mm"}}</strong>
-          </div>
-        </div>
-        <br>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Notes and Discussion</span>
-          <textarea rows="4"></textarea>
-        </label>
-      </div>
-    </ion-content>
+    </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js "></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js "></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle ").click(function(e) {
+            e.preventDefault();
+            $("#wrapper ").toggleClass("toggled ");
+        });
+        $(document).ready(function() {
+            var next = 1;
+            $(".add-more").click(function(e) {
+                e.preventDefault();
+                var addto = "#field" + next;
+                var addRemove = "#field" + (next);
+                next = next + 1;
+                var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
+                var newInput = $(newIn);
+                var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
+                var removeButton = $(removeBtn);
+                $(addto).after(newInput);
+                $(addRemove).after(removeButton);
+                $("#field" + next).attr('data-source', $(addto).attr('data-source'));
+                $("#count").val(next);
+
+                $('.remove-me').click(function(e) {
+                    e.preventDefault();
+                    var fieldNum = this.id.charAt(this.id.length - 1);
+                    var fieldID = "#field" + fieldNum;
+                    $(this).remove();
+                    $(fieldID).remove();
+                });
+            });
+
+
+
+        });
+
+        function myFunction() {
+            var x = document.getElementById("myFile ");
+            x.disabled = true;
+        }
+    </script>
+
+
+
+
+
+  </ion-content>
 </ion-view>
