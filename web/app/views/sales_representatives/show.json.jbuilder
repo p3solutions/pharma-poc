@@ -1,0 +1,1 @@
+json.partial! "sales_representatives/sales_representative", sales_representative: @sales_representative
