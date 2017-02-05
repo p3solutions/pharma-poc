@@ -34,12 +34,12 @@
         <td><%= sales_representative.email %></td>
         <td><%= link_to 'Show', sales_representative %></td>
         <td><%= link_to 'Edit', edit_sales_representative_path(sales_representative) %></td>
-        <td><%= link_to 'Destroy', sales_representative, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', sales_representative, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Sales Representative', new_sales_representative_path %>
+<%= link_to 'Add Sales Rep', new_sales_representative_path, class: "btn btn-link" %>
+<%= link_to 'List of Doctors', doctors_path, class: "btn btn-link"  %>
