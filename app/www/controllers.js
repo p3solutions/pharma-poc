@@ -52,4 +52,9 @@ angular.module('starter.controllers', [])
 
 .controller('DoctorCtrl', function($scope, $stateParams) {
   $scope.dateValue = new Date();
+  $scope.items = [
+    {"name":"metacin", "available": false},
+    {"name":"dola 650", "available": true},
+    {"name":"chericof", "available": true}
+  ];
 })
