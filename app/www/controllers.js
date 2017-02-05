@@ -52,4 +52,12 @@ angular.module('starter.controllers', [])
 
 .controller('DoctorCtrl', function($scope, $stateParams) {
   $scope.dateValue = new Date();
+  $scope.items = [];
+  $scope.available_drugs = ["metacin", "dolo650", "cherricof"]
+
+  $scope.addDrug = function()
+  {
+    is_available = this.available_drugs.indexOf(this.drug_name) > -1;
+    this.items.unshift({"name": this.drug_name, "available": is_available});
+  }
 })
