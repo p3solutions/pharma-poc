@@ -1,0 +1,2 @@
+class SalesRepresentative < ApplicationRecord
+end
