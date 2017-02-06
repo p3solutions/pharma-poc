@@ -118,7 +118,9 @@ h1{
 }
 .panel-default {
     border-color: #00bcd4;
-  margin-bottom:30px;
+    margin-bottom:30px;
+    width: 100%;
+    float: left;
 }
 .fa-user-circle {
     font-size: 80px !important;
@@ -172,13 +174,15 @@ h1{
 }
 .add-doctor{
   background-color:#0097a7;
-  height: 152px;
+  min-height: 175px;
   padding-right: 0;
   padding-left: 0;
   padding-top: 56px;
+  float: left;
+  width: 25%;
 }
 .add-doctor a{
-  font-size: 20px;
+  font-size: 14px;
   font-weight: bold;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color:#fff;
@@ -195,6 +199,7 @@ h1{
   height: 150px;
   border-radius: 50%;
   padding-top: 20px;
+  float: left;
   
 }
 .enroll h4, .cases h4, .followup h4{
@@ -218,8 +223,10 @@ h1{
   height: 150px;
   border-radius: 50%;
   padding-top: 20px;
+  float: left;
 }
 .followup{
+  width: 100%;
   height: 200px;
   background-color: #00bcd4;
   margin-top: 40px;
@@ -245,7 +252,6 @@ span.email {
 
 span.time {
     float: left;
-    margin-top: 10px;
     padding-left: 6px;
     font-size: 14px;
 }
@@ -260,7 +266,6 @@ span.glyphicon.glyphicon-envelope.pull-middle {
     border: 2px solid #737070;
     font-size: 14px;
     margin: -12px 11px 0 -2px;
-    float: left;
     color: #737070;
 }
 
@@ -277,7 +282,7 @@ span.glyphicon.glyphicon-earphone.pull-middle {
 span.phone,
 span.local {
     line-height: 39px;
-    font-size: 23px;
+    font-size: 18px;
 }
 
 span.glyphicon.glyphicon-map-marker.pull-middle {
@@ -291,15 +296,15 @@ span.glyphicon.glyphicon-map-marker.pull-middle {
 }
 
 i.glyphicon.glyphicon-calendar {
-    font-size: 40px;
+    font-size: 30px;
     padding: 9px;
     float: left;
 }
 
 i.glyphicon.glyphicon-time {
-    font-size: 40px;
-    padding: 9px;
+    font-size: 30px;
     float: left;
+    margin-top: 5px;
 }
 
 .control-add input {
@@ -313,3 +318,55 @@ i.glyphicon.glyphicon-time {
     margin-top: 0px;
     border-radius: 0;
 }
+
+/* new style */
+
+fieldset {width: 100%;}
+.login-screen {width: 100%;}
+.row {width: auto;}
+.add-doc {width: 100%; float: left;}
+.doctor-details {width: 75%; min-height: 175px;}
+.followup-box {margin: auto;}
+.comment-area {width: 100%; float: left; margin-top: 25px;}
+.comment-history-container {width: 100%; float: left;margin-top: 15px;}
+.comment-history-box {
+  width: 100%; 
+  float: left; 
+  padding:0 10px 0 10px; 
+  margin-bottom: 15px;
+  border: 1px solid #ccc; 
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px;
+
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.55);
+  box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.55);
+
+}
+.comment-history-box h4 {font-size: 14px; color: #333; text-align: left; line-height: 18px; padding-bottom: 10px;border-bottom: 1px solid #ccc;}
+.comment-date {font-size: 13px; font-style: italic; color: #990000; text-align: right;}
+.drugs-input-container {width: 100%; float: left;padding-top: 25px;margin-bottom: 20px}
+.drug-input {display: inline-block; width: 85%; vertical-align: middle;margin-right: 2%;}
+.drug-add-icon {display: inline-block; width: 10%; vertical-align: middle;}
+input.drug-input-box {border: 1px solid #ccc !important; width: 100%;padding: 0 10px;}
+.fa-1-plus {font-size: 30px !important; color: green}
+.btn-add-notes {width: 100%;}
+
+.drug-list-available-container {
+  width: 100%; float: left;
+  border: 1px solid #ccc;padding: 10px;
+}
+.drug-list-available-container table {width: 100%;}
+.drug-list-available-container table tr th {font-weight: bold; color: #990000;}
+.drug-list-available-container table tr td:last-child {text-align: center;}
+.status-circle-green {font-size: 15px; color: green;}
+.status-circle-red {font-size: 15px; color: red;}
+
+.add-doctor-container {width: 100%; padding-top: 15px;}
+.add-doctor-name {padding: 0 10px 0 10px !important; margin-bottom: 10px !important;}
+
+.add-doctors-infobox {width: 100%; border: 1px solid #ccc; padding: 5px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin-bottom: 15px;}
+
+
+

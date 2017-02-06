@@ -62,6 +62,25 @@ angular.module('starter', ['ionic', 'starter.controllers', "ion-datetime-picker"
         }
       }
     })
+    .state('app.notes', {
+      cache: false,
+      url: "/notes",
+      views: {
+        'menuContent' :{
+          templateUrl: "notes.html",
+          controller: 'DoctorsCtrl'
+        }
+      }
+    })    .state('app.drugs', {
+      cache: false,
+      url: "/drugs",
+      views: {
+        'menuContent' :{
+          templateUrl: "drugs.html",
+          controller: 'DoctorsCtrl'
+        }
+      }
+    })
     .state('app.single', {
       url: "/doctors/:doctorId",
       views: {
