@@ -19,10 +19,6 @@
                             <span class="glyphicon glyphicon-earphone pull-middle"></span>
                             <span class="phone"> 555 555 5555</span>
                         </p>
-                        <p>
-                            <span class="glyphicon glyphicon-map-marker pull-middle"></span>
-                            <span class="local"> Location</span>
-                        </p>
                     </div>
                 </div>
                 <div class="btn-group btn-group-justified ">
@@ -40,51 +36,43 @@
                         </span>
                     </a>
                 </div>
-                <br>
-                <!-- <div class="row media col-lg-12">
-                    <textarea class="text-area" rows="4" placeholder = "Notes"></textarea>
+                <div class="drop-down">
+                    <select class = "btn btn-default">
+                      <option value="Status "> Case Status</option>
+                      <option value="Failure ">Successfully Closed</option>
+                      <option value="Success ">Need Follow-up's</option>
+                      <option value="All ">Case Failed</option>
+                    </select>
                 </div>
-
-                <div class="form-group ">
-                    <div>
-                        <a href="#">
-                            <button type="submit " class="btn btn-default btn-lg btn-block">
-                                Submit
-                            </button>
-                        </a>
-                    </div>
-                </div> -->
-                <!-- <div class="control-group control-add" id="fields">
-                    <div class="controls" id="profs">
-                        <form class="input-append" ng-submit="addDrug()">
-                            <div id="field">
-                                <input autocomplete="off" class="input pull-left" id="field1" 
-                                    name="prof1" type="text" placeholder="Drug" 
-                                    data-items="8" ng-model="drug_name"/>
-                                <button class="btn add-more pull-right" 
-                                    type="submit">
-                                    +
-                                </button>
-                            </div>
-                        </form>
-                        <br>
-                    </div>
-                </div> -->
-                <br><br>
-                <p><a href="#/app/notes">Add Notes</a></p><br>
-                <p><a href="#/app/drugs">Check for drugs</a></p>
-                
-                <div>
-                    <ion-list>
-                      <ion-item ng-repeat="item in items">
-                        {{item.name}}
-                        <i class="glyphicon glyphicon-ok pull-middle"
-                            aria-hidden="true"
-                            ng-show="item.available">
-                        </i>
-                      </ion-item>
-                    </ion-list>
+                <div class="comment-history-box">
+                  <table class="table">
+                    <tr>
+                      <td><b>12/01/2016</b> - Met doctor and spoke ...</td>
+                    </tr>
+                    <tr>
+                      <td><b>17/01/2016</b> - Spoke about hospital ...</td>
+                    </tr>
+                  </table>
                 </div>
+                <a href="#/app/notes" class = "btn btn-default">Add Notes</a></p>
+                <div class="comment-history-box">
+                  <table class="table">
+                    <tr>
+                      <td width="80%">Drug Name 1</td>
+                      <td width="20%"><i class="fa fa-circle status-circle-green"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Drug Name 2</td>
+                      <td><i class="fa fa-circle status-circle-red"></i></td>
+                    </tr>
+                  </table>
+                </div>
+                <table>
+                    <tr>
+                        <td><a href="#/app/drugs" class = "btn btn-default">Add drugs</a></p></td>
+                        <td><a href="#/app/drugs" class = "btn btn-default">Add Purchase Order</a></p></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
