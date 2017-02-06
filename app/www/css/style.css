@@ -118,7 +118,9 @@ h1{
 }
 .panel-default {
     border-color: #00bcd4;
-  margin-bottom:30px;
+    margin-bottom:30px;
+    width: 75%;
+    float: left;
 }
 .fa-user-circle {
     font-size: 80px !important;
@@ -172,10 +174,12 @@ h1{
 }
 .add-doctor{
   background-color:#0097a7;
-  height: 152px;
+  height: 150px;
   padding-right: 0;
   padding-left: 0;
   padding-top: 56px;
+  float: left;
+  width: 25%;
 }
 .add-doctor a{
   font-size: 20px;
@@ -195,6 +199,7 @@ h1{
   height: 150px;
   border-radius: 50%;
   padding-top: 20px;
+  float: left;
   
 }
 .enroll h4, .cases h4, .followup h4{
@@ -218,6 +223,7 @@ h1{
   height: 150px;
   border-radius: 50%;
   padding-top: 20px;
+  float: left;
 }
 .followup{
   height: 200px;
@@ -313,3 +319,10 @@ i.glyphicon.glyphicon-time {
     margin-top: 0px;
     border-radius: 0;
 }
+
+/* new style */
+
+fieldset {width: 100%;}
+.login-screen {width: 100%;}
+.row {width: auto;}
+.add-doc {width: 100%; float: left;}
