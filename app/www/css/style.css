@@ -351,6 +351,7 @@ fieldset {width: 100%;}
 .drug-add-icon {display: inline-block; width: 10%; vertical-align: middle;}
 input.drug-input-box {border: 1px solid #ccc !important; width: 100%;padding: 0 10px;}
 .fa-1-plus {font-size: 30px !important; color: green}
+.btn-add-notes {width: 100%;}
 
 .drug-list-available-container {
   width: 100%; float: left;
@@ -362,7 +363,10 @@ input.drug-input-box {border: 1px solid #ccc !important; width: 100%;padding: 0 
 .status-circle-green {font-size: 15px; color: green;}
 .status-circle-red {font-size: 15px; color: red;}
 
+.add-doctor-container {width: 100%; padding-top: 15px;}
+.add-doctor-name {padding: 0 10px 0 10px !important; margin-bottom: 10px !important;}
 
+.add-doctors-infobox {width: 100%; border: 1px solid #ccc; padding: 5px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin-bottom: 15px;}
 
 
 
