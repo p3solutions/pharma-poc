@@ -327,3 +327,42 @@ fieldset {width: 100%;}
 .add-doc {width: 100%; float: left;}
 .doctor-details {width: 75%; min-height: 175px;}
 .followup-box {margin: auto;}
+.comment-area {width: 100%; float: left; margin-top: 25px;}
+.comment-history-container {width: 100%; float: left;margin-top: 15px;}
+.comment-history-box {
+  width: 100%; 
+  float: left; 
+  padding:0 10px 0 10px; 
+  margin-bottom: 15px;
+  border: 1px solid #ccc; 
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px;
+
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.55);
+  box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.55);
+
+}
+.comment-history-box h4 {font-size: 14px; color: #333; text-align: left; line-height: 18px; padding-bottom: 10px;border-bottom: 1px solid #ccc;}
+.comment-date {font-size: 13px; font-style: italic; color: #990000; text-align: right;}
+.drugs-input-container {width: 100%; float: left;padding-top: 25px;margin-bottom: 20px}
+.drug-input {display: inline-block; width: 85%; vertical-align: middle;margin-right: 2%;}
+.drug-add-icon {display: inline-block; width: 10%; vertical-align: middle;}
+input.drug-input-box {border: 1px solid #ccc !important; width: 100%;padding: 0 10px;}
+.fa-1-plus {font-size: 30px !important; color: green}
+
+.drug-list-available-container {
+  width: 100%; float: left;
+  border: 1px solid #ccc;padding: 10px;
+}
+.drug-list-available-container table {width: 100%;}
+.drug-list-available-container table tr th {font-weight: bold; color: #990000;}
+.drug-list-available-container table tr td:last-child {text-align: center;}
+.status-circle-green {font-size: 15px; color: green;}
+.status-circle-red {font-size: 15px; color: red;}
+
+
+
+
+
