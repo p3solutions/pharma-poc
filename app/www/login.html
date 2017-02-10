@@ -1,34 +1,13 @@
 <ion-view title="Sign In">
   <ion-content class="has-header">
-      <div id="wrapper">
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 login-screen text-center">
-                        <form class="form-horizontal login"  ng-submit="isUserValid()">
-                            <fieldset>
-                                <div class="form-group">
-                                  <input type="text" class="form-control" id="inputEmail" name="email" placeholder="Email" ng-model="user_name">
-                                </div>
-                                <div class="form-group">
-                                  <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" ng-model="password">
-                                </div>
-                                <div class="form-group">
-                                  <button type="submit" class="btn btn-default btn-lg btn-block">Login</button>
-                                  <a href="#" class="rest-pass">Reset Password</a>
-                                  <div class="alert alert-danger" ng-hide="error_message==''">
-                                    {{error_message}}
-                                  </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
+    <div class="list list-inset">
+      <label class="item item-input">
+          <input type="text" placeholder="Username" ng-model="user_name">
+      </label>
+      <label class="item item-input">
+          <input type="password" placeholder="Password" ng-model="password">
+      </label>
     </div>
-    <!-- /#wrapper -->
+    <button class="button button-block button-calm" ng-click="isUserValid()">Login</button>
   </ion-content>
 </ion-view>
