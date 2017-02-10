@@ -8,6 +8,26 @@ angular.module('starter.controllers', [])
   $scope.no_of_doctors = 0;
   $scope.error_message = ""
 
+  var trace1 = {
+    x: ['Metacin', 'Dolo 650', 'Paracetamol', 'ABC'],
+    y: [20, 14, 23, 35],
+    name: 'Achieved',
+    type: 'bar'
+  };
+
+  var trace2 = {
+    x: ['Metacin', 'Dolo 650', 'Paracetamol', 'ABC'],
+    y: [20, 26, 17, 5],
+    name: 'Pending',
+    type: 'bar'
+  };
+
+  var data = [trace1, trace2];
+
+  var layout = {barmode: 'stack'};
+
+  Plotly.newPlot('tester', data, layout);
+
   $http.get("http://localhost:3000/doctors.json")
     .success(function(data) {
       $scope.doctors = data;
