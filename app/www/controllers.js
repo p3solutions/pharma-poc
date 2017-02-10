@@ -8,6 +8,26 @@ angular.module('starter.controllers', [])
   $scope.no_of_doctors = 0;
   $scope.error_message = ""
 
+  var trace1 = {
+    x: [1, 2, 3, 4],
+    y: [10, 15, 13, 17],
+    type: 'scatter'
+  };
+
+  var trace2 = {
+    x: [1, 2, 3, 4],
+    y: [16, 5, 11, 9],
+    type: 'scatter'
+  };
+
+  var layout = {
+    title: 'Connect the Gaps Between Data',
+    showlegend: false
+  };
+
+  var data = [trace1, trace2];
+  Plotly.newPlot('tester', data, layout);
+
   $http.get("http://localhost:3000/doctors.json")
     .success(function(data) {
       $scope.doctors = data;
