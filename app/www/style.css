@@ -1,2 +1,42 @@
-/* Styles go here */
+.badge {
+    background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+    box-shadow: 1px 1px 1px black;
+    color: white;
+    font: bold 15px/13px Helvetica, Verdana, Tahoma;
+    height: 16px; 
+    min-width: 14px;
+    padding: 4px 3px 0 3px;
+    text-align: center;
+}
 
+.enroll {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 15px;
+    margin: 0 auto;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    padding-top: 20px;
+}
+
+.enroll h4,
+.cases h4 {
+    font-size: 15px;
+    color: #fff;
+    line-height: 6px;
+}
+
+.enroll p,
+.cases p {
+    font-size: 15px;
+    color: #fff;
+    line-height: 20px;
+}
+
+.no-text {
+    font-size: 25px;
+}

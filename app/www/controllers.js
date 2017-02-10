@@ -9,23 +9,23 @@ angular.module('starter.controllers', [])
   $scope.error_message = ""
 
   var trace1 = {
-    x: [1, 2, 3, 4],
-    y: [10, 15, 13, 17],
-    type: 'scatter'
+    x: ['Metacin', 'Dolo 650', 'Paracetamol', 'ABC'],
+    y: [20, 14, 23, 35],
+    name: 'Achieved',
+    type: 'bar'
   };
 
   var trace2 = {
-    x: [1, 2, 3, 4],
-    y: [16, 5, 11, 9],
-    type: 'scatter'
-  };
-
-  var layout = {
-    title: 'Connect the Gaps Between Data',
-    showlegend: false
+    x: ['Metacin', 'Dolo 650', 'Paracetamol', 'ABC'],
+    y: [20, 26, 17, 5],
+    name: 'Pending',
+    type: 'bar'
   };
 
   var data = [trace1, trace2];
+
+  var layout = {barmode: 'stack'};
+
   Plotly.newPlot('tester', data, layout);
 
   $http.get("http://localhost:3000/doctors.json")
