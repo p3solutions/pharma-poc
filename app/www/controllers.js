@@ -20,7 +20,7 @@ angular.module('starter.controllers', [])
 
   var data = [trace1, trace2];
 
-  var layout = {barmode: 'stack'};
+  var layout = {barmode: 'stack', paper_bgcolor: 'rgba(239,239,239,1)'};
 
   Plotly.newPlot('quarterly_sales', data, layout);
 })
