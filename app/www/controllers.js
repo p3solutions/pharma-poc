@@ -3,11 +3,7 @@ angular.module('starter.controllers', [])
 .controller('AppCtrl', function($scope) {
 })
 
-.controller('DoctorsCtrl', function($scope, $http, $state) {
-  $scope.doctors = []
-  $scope.no_of_doctors = 0;
-  $scope.error_message = ""
-
+.controller('DashboardCtrl', function($scope) {
   var trace1 = {
     x: ['Metacin', 'Dolo 650', 'Paracetamol', 'ABC'],
     y: [20, 14, 23, 35],
@@ -26,17 +22,10 @@ angular.module('starter.controllers', [])
 
   var layout = {barmode: 'stack'};
 
-  Plotly.newPlot('tester', data, layout);
+  Plotly.newPlot('quarterly_sales', data, layout);
+})
 
-  $http.get("http://localhost:3000/doctors.json")
-    .success(function(data) {
-      $scope.doctors = data;
-      $scope.no_of_doctors = data.length
-    })
-    .error(function(data) {
-        alert("ERROR");
-    });
-
+.controller('LoginCtrl', function($scope, $state) {
   $scope.isUserValid = function()
   {
     if(this.user_name == "admin" && this.password == "password")
@@ -49,6 +38,21 @@ angular.module('starter.controllers', [])
       this.error_message = "Incorrect user name or password"
     }
   }
+})
+
+.controller('DoctorsCtrl', function($scope, $http, $state) {
+  $scope.doctors = []
+  $scope.no_of_doctors = 0;
+  $scope.error_message = ""
+
+  $http.get("http://localhost:3000/doctors.json")
+    .success(function(data) {
+      $scope.doctors = data;
+      $scope.no_of_doctors = data.length
+    })
+    .error(function(data) {
+        alert("ERROR");
+    });
 
   $scope.addDoctor = function()
   {

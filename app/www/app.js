@@ -29,7 +29,17 @@ angular.module('starter', ['ionic', 'starter.controllers', "ion-datetime-picker"
       views: {
         'menuContent' :{
           templateUrl: "dashboard.html",
-          controller: 'DoctorsCtrl'
+          controller: 'DashboardCtrl'
+        }
+      }
+    })
+    .state('app.login', {
+      cache: false,
+      url: "/login",
+      views: {
+        'menuContent' :{
+          templateUrl: "login.html",
+          controller: 'LoginCtrl'
         }
       }
     })
@@ -52,16 +62,6 @@ angular.module('starter', ['ionic', 'starter.controllers', "ion-datetime-picker"
         }
       }
     })
-    .state('app.login', {
-      cache: false,
-      url: "/login",
-      views: {
-        'menuContent' :{
-          templateUrl: "login.html",
-          controller: 'DoctorsCtrl'
-        }
-      }
-    })
     .state('app.notes', {
       cache: false,
       url: "/notes",
@@ -71,7 +71,8 @@ angular.module('starter', ['ionic', 'starter.controllers', "ion-datetime-picker"
           controller: 'DoctorsCtrl'
         }
       }
-    })    .state('app.drugs', {
+    })
+    .state('app.drugs', {
       cache: false,
       url: "/drugs",
       views: {
