@@ -72,12 +72,12 @@ angular.module('starter', ['ionic', 'starter.controllers', "ion-datetime-picker"
         }
       }
     })
-    .state('app.drugs', {
+    .state('app.sales', {
       cache: false,
-      url: "/drugs",
+      url: "/sales",
       views: {
         'menuContent' :{
-          templateUrl: "drugs.html",
+          templateUrl: "sales_cycle.html",
           controller: 'DoctorsCtrl'
         }
       }
