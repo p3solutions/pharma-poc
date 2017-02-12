@@ -75,9 +75,9 @@ angular.module('starter.controllers', [])
 })
 
 .controller('DoctorCtrl', function($scope, $stateParams) {
-  $scope.dateValue = new Date();
   $scope.items = [];
   $scope.available_drugs = ["metacin", "dolo650", "cherricof"]
+  $scope.dateValue = Date.now()
 
   $scope.addDrug = function()
   {

@@ -44,3 +44,13 @@
 .background, .background .pane, .background .item, .background .item-complex .item-content{
     background-color: #efefef;
 }
+
+.header .col {
+    background-color:lightgrey;
+    font: bold 16px/14px Helvetica, Verdana, Tahoma;
+}
+
+.col {
+    border-bottom-style: none;
+    border-right-style: none;
+}
