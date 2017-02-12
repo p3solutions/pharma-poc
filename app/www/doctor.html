@@ -1,81 +1,78 @@
-<ion-view title="Alex Alen">
+<ion-view title="Sales Detail">
   <ion-nav-buttons side="left">
     <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content>
     <div id="wrapper">
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row media col-lg-12">
-                    <div class="col-sm-11 pull-middle">
-                        <br>
-                        <br>
-                        <p>
-                            <span class="glyphicon glyphicon-envelope pull-middle "></span>
-                            <span class="email"> alexalen@dm.com</span>
-                        </p>
-                        <p>
-                            <span class="glyphicon glyphicon-earphone pull-middle"></span>
-                            <span class="phone"> 555 555 5555</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="btn-group btn-group-justified ">
-                    <a href="# " class="btn btn-default btn-left ">
-                        <i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>
-                        <span class="app-date">February <br>16 </span>
-                    </a>
-                    <a href="# " class="btn btn-default btn-right ">
-                        <i class="glyphicon glyphicon-time" aria-hidden="true"></i>
-                        <span class="time">From<br>
-                            20:00
-                        </span>
-                        <span class="time">To<br>
-                            20:30
-                        </span>
-                    </a>
-                </div>
-                Number of visits : 9
-                <div class="drop-down">
-                    <select class = "btn btn-default">
-                      <option value="Status "> Case Status</option>
-                      <option value="Failure ">Successfully Closed</option>
-                      <option value="Success ">Need Follow-up's</option>
-                      <option value="All ">Case Failed</option>
-                    </select>
-                </div>
-                <div class="comment-history-box">
-                  <table class="table">
-                    <tr>
-                      <td><b>12/01/2016</b> - Met doctor and spoke ...</td>
-                    </tr>
-                    <tr>
-                      <td><b>17/01/2016</b> - Spoke about hospital ...</td>
-                    </tr>
-                  </table>
-                </div>
-                <a href="#/app/notes" class = "btn btn-default">Add Notes</a></p>
-                <div class="comment-history-box">
-                  <table class="table">
-                    <tr>
-                      <td width="80%">Drug Name 1</td>
-                      <td width="20%"><i class="fa fa-circle status-circle-green"></i></td>
-                    </tr>
-                    <tr>
-                      <td>Drug Name 2</td>
-                      <td><i class="fa fa-circle status-circle-red"></i></td>
-                    </tr>
-                  </table>
-                </div>
-                <table>
-                    <tr>
-                        <td><a href="#/app/drugs" class = "btn btn-default">Add drugs</a></p></td>
-                        <td><a href="#/app/drugs" class = "btn btn-default">Add Purchase Order</a></p></td>
-                    </tr>
-                </table>
-            </div>
+      <div id="page-content-wrapper">
+        <h4>Appointment Details</h4>
+        <div class="item item-icon-left" ion-datetime-picker ng-model="dateValue">
+          <i class="icon ion-ios-calendar positive"></i>
+          <strong>{{dateValue| date: "H:mm"}}</strong>
+          <strong>{{dateValue| date: "dd/MMM"}}</strong>
+          <div class ="pull-right">
+            Total Visits : <b>09</b>
+          </div>
         </div>
+        <h4>Drug Sales</h4>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr style="color: #fff; background: #0066ff;">
+              <th><b>Drug</b></th>
+              <th><b>Status</b></th>
+              <th><b>Opened On</b></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Metacin</td>
+              <td>Open</td>
+              <td>5 Feb</td>
+            </tr>
+            <tr>
+              <td>Metacin</td>
+              <td>Open</td>
+              <td>5 Feb</td>
+            </tr>
+            <tr>
+              <td>Metacin</td>
+              <td>Open</td>
+              <td>5 Feb</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="bar bar-dark">
+          <a class="title" href = "#/app/sales">Add Sales Cycle</a>
+        </div>
+        <br>
+        <br>
+        <h4>Drug Presciption</h4>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr style="color: #fff; background: #0066ff;">
+              <th><b>Prescription</b></th>
+              <th><b>Alternate</b></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Metacin</td>
+              <td>Dola 650</td>
+            </tr>
+            <tr>
+              <td>Metacin</td>
+              <td>Paracetamol</td>
+            </tr>
+            <tr>
+              <td>Metacin</td>
+              <td>Calpol</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="bar bar-dark">
+          <a class="title">Add Prescription</a>
+        </div>
+      </div>
     </div>
   </ion-content>
 </ion-view>
