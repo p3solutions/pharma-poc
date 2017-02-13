@@ -1,1 +1,0 @@
-json.array! @sales_representatives, partial: 'sales_representatives/sales_representative', as: :sales_representative

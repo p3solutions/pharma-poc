@@ -45,7 +45,7 @@ angular.module('starter.controllers', [])
   $scope.no_of_doctors = 0;
   $scope.error_message = ""
 
-  $http.get("http://localhost:3000/doctors.json")
+  $http.get("https://lit-retreat-77983.herokuapp.com/doctors.json")
     .success(function(data) {
       $scope.doctors = data;
       $scope.no_of_doctors = data.length
@@ -63,7 +63,7 @@ angular.module('starter.controllers', [])
       speciality: this.speciality
     }
 
-    $http.post("http://localhost:3000/doctors.json", doctor)
+    $http.post("https://lit-retreat-77983.herokuapp.com/doctors.json", doctor)
       .success(function(data)
       {
         $state.go('app.doctors');

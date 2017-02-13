@@ -1,2 +1,0 @@
-class SalesRepresentative < ApplicationRecord
-end

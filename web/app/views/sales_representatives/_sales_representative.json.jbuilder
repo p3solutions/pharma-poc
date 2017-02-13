@@ -1,2 +1,0 @@
-json.extract! sales_representative, :id, :first_name, :last_name, :middle_name, :experience, :ssn, :city, :country, :state, :phone, :email, :created_at, :updated_at
-json.url sales_representative_url(sales_representative, format: :json)
