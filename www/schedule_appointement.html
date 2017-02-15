@@ -1,89 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Sr Appointment Details</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
-
-<body>
-
+<ion-view title="Schedule Appointment">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
     <div id="wrapper">
-
-      
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                       Navigation
-                    </a>
-                </li>
-                <li>
-                    <a href="SrLogin.html">Home</a>
-                </li>
-                <li>
-                    <a href="SrDashboard.html">Dashboard</a>
-                </li>
-                <li>
-                    <a href="SrEnrollDoctor.html">Enroll Doctor</a>
-                </li>
-                <li>
-                    <a href="#">Edit Profile</a>
-                </li>
-                <li>
-                    <a href="SrDrList.html">Doctors Lists</a>
-                </li>
-                <li>
-                    <a href="SalesDetails.html">Sales Details</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
 
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="row top-title">
-                <a href="#menu-toggle" class="btn btn-default appointment_menu" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                <div class="col-sm-12 menu-title">
-                    <h3>Schedule Appointment</h3>
-                </div>
-            </div>
 
-            <div class="container-fluid">
+
+       <div class="container-fluid">
               <!--<center><h4> Schedule New / Modify Appointment </h4></center>-->
 
  		<div class="row media col-sm-12">
@@ -101,56 +28,16 @@
               </span>
                     </div>
                 </div>
-              
+
                  <div class="col-sm-12">
                             <button type="submit " class="btn btn-default btn-lg btn-block add-drugs">Save</button>
                         </div>
-               
-            </div> 
+
+            </div>
       </div><!-- /#page-content-wrapper -->
 
     </div>
     <!-- /#wrapper -->
+</ion-content>
+</ion-view>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js "></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js "></script>
-
-    <!-- Menu Toggle Script -->
-    <script>
-        $("#menu-toggle ").click(function(e) {
-            e.preventDefault();
-            $("#wrapper ").toggleClass("toggled ");
-        });
-        $(document).ready(function() {
-            var next = 1;
-            $(".add-more").click(function(e) {
-                e.preventDefault();
-                var addto = "#field" + next;
-                var addRemove = "#field" + (next);
-                next = next + 1;
-                var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
-                var newInput = $(newIn);
-                var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
-                var removeButton = $(removeBtn);
-                $(addto).after(newInput);
-                $(addRemove).after(removeButton);
-                $("#field" + next).attr('data-source', $(addto).attr('data-source'));
-                $("#count").val(next);
-
-                $('.remove-me').click(function(e) {
-                    e.preventDefault();
-                    var fieldNum = this.id.charAt(this.id.length - 1);
-                    var fieldID = "#field" + fieldNum;
-                    $(this).remove();
-                    $(fieldID).remove();
-                });
-            });
-        });
-    </script>
-
-</body>
-
-</html>

@@ -562,6 +562,10 @@ button.btn.btn-default.btn-lg.btn-block {
 {
     margin-top: 10px;
 }
+.btn-group.btn-group-justified.app_details
+{
+    margin-top: 10px;
+}
 /********************pie chart**********************/
 .nutChart {
     position: relative;
@@ -675,11 +679,21 @@ button.btn.btn-default.btn-lg.btn-block {
 .datepicker
 {
     width: 59%;
-    font-size: 16px;
-    padding: 0 0px 0 60px;
+    font-size: 16px !important;
+    padding: 0 0px 0 60px !important;
     margin-left: 4px;
     border-radius: 30px;
     margin-top: 0px;
+    display: inline !important;
+}
+
+input.well.well-sm.add-notes {
+    width: 100%;
+    margin-top: 10px;
+}
+
+textarea.add-notes {
+    width: 100%;
 }
 
 /**************************************************/
