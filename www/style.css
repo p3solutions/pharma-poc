@@ -296,9 +296,10 @@ button.btn.btn-app {
     margin-bottom: 20px;
 }
 .control-add input {
-    width: 86% !important;
+    width: 26% !important;
     padding: 5px 0;
     float: left !important;
+    margin-right: 10px;
 }
 .control-add button,
 .control-add button .add-more {
@@ -669,6 +670,9 @@ button.btn.btn-default.btn-lg.btn-block {
     font-weight: 800;
     border-bottom: 1px solid #ccc;
 }
+.media-middle.add_drugs {
+    margin-top: 40px;
+}
 .add-new-scale {
     margin-bottom: 15px !important;
 }
@@ -680,11 +684,12 @@ button.btn.btn-default.btn-lg.btn-block {
 {
     width: 59%;
     font-size: 16px !important;
-    padding: 0 0px 0 60px !important;
-    margin-left: 4px;
+    padding: 0 0px 0 40px !important;
+    /* margin-left: 0px; */
     border-radius: 30px;
     margin-top: 0px;
     display: inline !important;
+}
 }
 
 input.well.well-sm.add-notes {
