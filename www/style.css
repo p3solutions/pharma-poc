@@ -696,6 +696,16 @@ textarea.add-notes {
     width: 100%;
 }
 
+.app_add_note {
+    margin-top: 10px;
+}
+
+.media-middle .app_table h5 {
+    font-weight: bold;
+}
+
+
+
 /**************************************************/
 @media only screen and (max-width: 414px) {
     .top-title h3 {
