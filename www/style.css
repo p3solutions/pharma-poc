@@ -697,6 +697,11 @@ input.well.well-sm.add-notes {
     margin-top: 10px;
 }
 
+#page-content-wrapper .add-notes {
+    width: 100%;
+    margin-top: 10px;
+}
+
 textarea.add-notes {
     width: 100%;
 }
