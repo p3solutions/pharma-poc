@@ -22,7 +22,7 @@ angular.module('starter.controllers', [])
 
   var layout = {barmode: 'stack'};
 
-  Plotly.newPlot('quarterly_sales', data, layout);
+  //Plotly.newPlot('quarterly_sales', data, layout);
 })
 
 .controller('LoginCtrl', function($scope, $state) {
@@ -68,7 +68,7 @@ angular.module('starter.controllers', [])
       {
         $state.go('app.doctors');
       })
-      .error(function() 
+      .error(function()
       {
       })
   }

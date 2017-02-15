@@ -43,21 +43,20 @@ angular.module('starter', ['ionic', 'starter.controllers', "ion-datetime-picker"
         }
       }
     })
-    .state('app.add_doctor', {
-      url: "/add_doctor",
+    .state('app.enroll_doctor', {
+      url: "/enroll_doctor",
       views: {
         'menuContent' :{
-          templateUrl: "add_doctor.html",
+          templateUrl: "enroll_doctor.html",
           controller: 'DoctorsCtrl'
         }
       }
     })
-    .state('app.doctors', {
-      cache: false,
-      url: "/doctors",
+    .state('app.doctors_list', {
+      url: "/doctors_list",
       views: {
         'menuContent' :{
-          templateUrl: "doctors.html",
+          templateUrl: "doctors_list.html",
           controller: 'DoctorsCtrl'
         }
       }
@@ -72,12 +71,74 @@ angular.module('starter', ['ionic', 'starter.controllers', "ion-datetime-picker"
         }
       }
     })
-    .state('app.sales', {
+    .state('app.sales_details', {
       cache: false,
-      url: "/sales",
+      url: "/sales_details",
       views: {
         'menuContent' :{
-          templateUrl: "sales_cycle.html",
+          templateUrl: "sales_details.html",
+          controller: 'DoctorsCtrl'
+        }
+      }
+    })
+
+    .state('app.appointment_details', {
+      cache: false,
+      url: "/appointment_details",
+      views: {
+        'menuContent' :{
+          templateUrl: "appointment_details.html",
+          controller: 'DoctorsCtrl'
+        }
+      }
+    })
+    .state('app.schedule_appointement', {
+      cache: false,
+      url: "/schedule_appointement",
+      views: {
+        'menuContent' :{
+          templateUrl: "schedule_appointement.html",
+          controller: 'DoctorsCtrl'
+        }
+      }
+    })
+    .state('app.add_new_sales', {
+      cache: false,
+      url: "/add_new_sales",
+      views: {
+        'menuContent' :{
+          templateUrl: "add_new_sales.html",
+          controller: 'DoctorsCtrl'
+        }
+      }
+    })
+
+    .state('app.add_new_prescription', {
+      cache: false,
+      url: "/add_new_prescription",
+      views: {
+        'menuContent' :{
+          templateUrl: "add_new_prescription.html",
+          controller: 'DoctorsCtrl'
+        }
+      }
+    })
+    .state('app.add_drugs', {
+      cache: false,
+      url: "/add_drug",
+      views: {
+        'menuContent' :{
+          templateUrl: "add_drugs.html",
+          controller: 'DoctorsCtrl'
+        }
+      }
+    })
+    .state('app.add_notes', {
+      cache: false,
+      url: "/add_notes",
+      views: {
+        'menuContent' :{
+          templateUrl: "add_notes.html",
           controller: 'DoctorsCtrl'
         }
       }

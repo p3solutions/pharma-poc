@@ -36,6 +36,7 @@ h1 {
 {
     margin-left: 0px !important;
     margin-right: 0px !important;
+    display: block;
 }
 
 .text-area {
@@ -49,7 +50,7 @@ h1 {
     float: right;
 }
 .input-group.input-group-sm.col-sm-6.pull-right {
-    margin-right: -30px;
+    margin-right: -20px;
     margin-top: 10px;
 }
 .drop-down select {
@@ -289,6 +290,7 @@ button.btn.btn-app {
     width: 15%;
     background-color: teal;
     color: #fff !important;
+    font-size:initial;
 }
 #field {
     margin-bottom: 20px;
@@ -556,7 +558,10 @@ button.btn.btn-default.btn-lg.btn-block {
 
     color: #fff;
 }
-
+.btn-group.btn-group-justified.sales_details
+{
+    margin-top: 10px;
+}
 /********************pie chart**********************/
 .nutChart {
     position: relative;
